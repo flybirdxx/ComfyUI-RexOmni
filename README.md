@@ -142,13 +142,6 @@ This example workflow shows:
 - **Keypoint Detection**: Detailed human pose keypoint extraction
 - **OCR**: Text recognition with polygon-based word detection
 
-### Example Workflow Files
-
-You can find the following files in the `example_workflow/` directory:
-- `example_workflow.json` - Complete workflow configuration file
-- `workflow.png` - Workflow visualization image
-- Various test image files
-
 ## 🐛 Troubleshooting
 
 ### Common Issues

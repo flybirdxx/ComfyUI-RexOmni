@@ -142,13 +142,6 @@ pip install torch torchvision pillow numpy huggingface_hub
 - **关键点检测**：详细的人体姿态关键点提取
 - **OCR**：基于多边形格式的文本识别
 
-### 示例工作流文件
-
-您可以在 `example_workflow/` 目录中找到：
-- `example_workflow.json` - 完整的工作流配置文件
-- `workflow.png` - 工作流可视化图像
-- 各种测试图像文件
-
 ## 🐛 故障排除
 
 ### 常见问题
