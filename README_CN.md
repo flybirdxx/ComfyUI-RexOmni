@@ -4,7 +4,7 @@
 [![ComfyUI](https://img.shields.io/badge/ComfyUI-自定义节点-green.svg)](https://github.com/comfyanonymous/ComfyUI)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> **⚠️ 重要提示**：由于我不是很懂代码，本插件由Claude编写，部分功能已经跑通，但是还有一些其他问题需要等待修复，如果遇到问题请提issue。
+> **⚠️ 重要提示**：由于我不懂代码，本插件由Claude编写，部分功能已经跑通，但是还有一些其他问题需要等待修复，如果遇到问题请提issue。
 
 一个强大的ComfyUI自定义节点，用于集成Rex-Omni多模态AI模型。该节点将Rex-Omni先进的计算机视觉和自然语言处理能力无缝集成到您的ComfyUI工作流中。
 
@@ -33,7 +33,7 @@
 
 ```bash
 cd ComfyUI/custom_nodes/
-git clone https://github.com/your-repo/ComfyUI-Rex-Omni.git
+git clone https://github.com/flybirdxx/ComfyUI-RexOmni.git
 ```
 
 ### 方法二：手动安装
@@ -42,10 +42,39 @@ git clone https://github.com/your-repo/ComfyUI-Rex-Omni.git
 2. 解压到 `ComfyUI/custom_nodes/ComfyUI-Rex-Omni/` 目录
 3. 确保所有依赖项已安装
 
+### 模型下载
+
+在使用此插件之前，您需要下载Rex-Omni模型：
+
+**模型地址**: [https://huggingface.co/IDEA-Research/Rex-Omni](https://huggingface.co/IDEA-Research/Rex-Omni)
+
+**下载路径**: `models/Rex-Omni/`
+
+#### 下载方法：
+
+1. **使用Hugging Face CLI**（推荐）：
+```bash
+# 安装huggingface_hub
+pip install huggingface_hub
+
+# 下载模型到指定路径
+huggingface-cli download IDEA-Research/Rex-Omni --local-dir models/Rex-Omni
+```
+
+2. **使用Git LFS**：
+```bash
+git lfs install
+git clone https://huggingface.co/IDEA-Research/Rex-Omni models/Rex-Omni
+```
+
+3. **手动下载**：
+   - 访问 [Hugging Face模型页面](https://huggingface.co/IDEA-Research/Rex-Omni)
+   - 下载所有文件到 `models/Rex-Omni/` 目录
+
 ### 依赖项安装
 
 ```bash
-pip install torch torchvision pillow numpy
+pip install torch torchvision pillow numpy huggingface_hub
 ```
 
 ## 📖 使用说明
@@ -105,13 +134,20 @@ pip install torch torchvision pillow numpy
 
 以下工作流展示了Rex-Omni节点的实际应用，演示了多种计算机视觉任务：
 
-![Rex-Omni工作流示例](workflow.png)
+![Rex-Omni工作流示例](example_workflow/workflow.png)
 
 此示例工作流展示了：
 - **目标检测**：在图像中检测人员并绘制边界框
 - **定位**：精确的指向和定位任务
 - **关键点检测**：详细的人体姿态关键点提取
 - **OCR**：基于多边形格式的文本识别
+
+### 示例工作流文件
+
+您可以在 `example_workflow/` 目录中找到：
+- `example_workflow.json` - 完整的工作流配置文件
+- `workflow.png` - 工作流可视化图像
+- 各种测试图像文件
 
 ## 🐛 故障排除
 
@@ -132,14 +168,15 @@ pip install torch torchvision pillow numpy
 ## 🙏 致谢
 
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI) 提供出色的框架
-- [Rex-Omni](https://github.com/your-repo/rex-omni) 提供多模态AI模型
+- [Rex-Omni](https://huggingface.co/IDEA-Research/Rex-Omni) 提供多模态AI模型
+- [IDEA-Research](https://huggingface.co/IDEA-Research) 团队开发了Rex-Omni模型
 - 开源社区提供灵感和支持
 
 ## 📞 支持
 
 如果您遇到任何问题或有疑问：
 
-1. 查看[问题](https://github.com/your-repo/ComfyUI-Rex-Omni/issues)页面
+1. 查看[问题](https://github.com/flybirdxx/ComfyUI-RexOmni/issues)页面
 2. 创建包含详细信息的新问题
 3. 加入我们的社区讨论
 

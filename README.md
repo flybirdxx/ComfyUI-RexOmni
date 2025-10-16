@@ -33,7 +33,7 @@ A powerful ComfyUI custom node for integrating Rex-Omni multimodal AI models. Th
 
 ```bash
 cd ComfyUI/custom_nodes/
-git clone https://github.com/your-repo/ComfyUI-Rex-Omni.git
+git clone https://github.com/flybirdxx/ComfyUI-RexOmni.git
 ```
 
 ### Method 2: Manual Installation
@@ -42,10 +42,39 @@ git clone https://github.com/your-repo/ComfyUI-Rex-Omni.git
 2. Extract it to `ComfyUI/custom_nodes/ComfyUI-Rex-Omni/`
 3. Ensure all dependencies are installed
 
+### Model Download
+
+Before using this plugin, you need to download the Rex-Omni model:
+
+**Model URL**: [https://huggingface.co/IDEA-Research/Rex-Omni](https://huggingface.co/IDEA-Research/Rex-Omni)
+
+**Download Path**: `models/Rex-Omni/`
+
+#### Download Methods:
+
+1. **Using Hugging Face CLI** (Recommended):
+```bash
+# Install huggingface_hub
+pip install huggingface_hub
+
+# Download model to specified path
+huggingface-cli download IDEA-Research/Rex-Omni --local-dir models/Rex-Omni
+```
+
+2. **Using Git LFS**:
+```bash
+git lfs install
+git clone https://huggingface.co/IDEA-Research/Rex-Omni models/Rex-Omni
+```
+
+3. **Manual Download**:
+   - Visit the [Hugging Face model page](https://huggingface.co/IDEA-Research/Rex-Omni)
+   - Download all files to the `models/Rex-Omni/` directory
+
 ### Dependencies Installation
 
 ```bash
-pip install torch torchvision pillow numpy
+pip install torch torchvision pillow numpy huggingface_hub
 ```
 
 ## 📖 Usage
@@ -105,13 +134,20 @@ The detector node provides multiple output types:
 
 The following workflow demonstrates the Rex-Omni nodes in action, showcasing multiple computer vision tasks:
 
-![Rex-Omni Workflow Example](workflow.png)
+![Rex-Omni Workflow Example](example_workflow/workflow.png)
 
 This example workflow shows:
 - **Object Detection**: Detecting people in images with bounding boxes
 - **Localization**: Precise pointing and localization tasks
 - **Keypoint Detection**: Detailed human pose keypoint extraction
 - **OCR**: Text recognition with polygon-based word detection
+
+### Example Workflow Files
+
+You can find the following files in the `example_workflow/` directory:
+- `example_workflow.json` - Complete workflow configuration file
+- `workflow.png` - Workflow visualization image
+- Various test image files
 
 ## 🐛 Troubleshooting
 
@@ -132,14 +168,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI) for the amazing framework
-- [Rex-Omni](https://github.com/your-repo/rex-omni) for the multimodal AI models
+- [Rex-Omni](https://huggingface.co/IDEA-Research/Rex-Omni) for the multimodal AI models
+- [IDEA-Research](https://huggingface.co/IDEA-Research) team for developing the Rex-Omni model
 - The open-source community for inspiration and support
 
 ## 📞 Support
 
 If you encounter any issues or have questions:
 
-1. Check the [Issues](https://github.com/your-repo/ComfyUI-Rex-Omni/issues) page
+1. Check the [Issues](https://github.com/flybirdxx/ComfyUI-RexOmni/issues) page
 2. Create a new issue with detailed information
 3. Join our community discussions
 
