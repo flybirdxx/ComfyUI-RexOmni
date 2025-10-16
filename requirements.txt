@@ -1,0 +1,15 @@
+timm
+einops
+torch
+torchvision
+transformers
+ftfy
+regex
+pycocotools
+opencv-python
+matplotlib
+huggingface-hub
+shapely
+scipy
+pyclipper
+ninja

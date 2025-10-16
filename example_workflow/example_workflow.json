@@ -1,0 +1,698 @@
+{
+  "id": "20159bde-00b5-4fc3-8093-4994db29d791",
+  "revision": 0,
+  "last_node_id": 64,
+  "last_link_id": 99,
+  "nodes": [
+    {
+      "id": 24,
+      "type": "RexOmniLoader",
+      "pos": [
+        -270,
+        730
+      ],
+      "size": [
+        450,
+        130
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "rex_omni_model",
+          "name": "rex_omni_model",
+          "type": "REX_OMNI_MODEL",
+          "links": [
+            81,
+            93,
+            94,
+            95
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RexOmniLoader"
+      },
+      "widgets_values": [
+        "Rex-Omni",
+        "transformers",
+        1024,
+        0.7
+      ]
+    },
+    {
+      "id": 28,
+      "type": "PreviewImage",
+      "pos": [
+        760,
+        680
+      ],
+      "size": [
+        490,
+        370
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 83
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 61,
+      "type": "PreviewImage",
+      "pos": [
+        800,
+        1110
+      ],
+      "size": [
+        490,
+        370
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 96
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 62,
+      "type": "PreviewImage",
+      "pos": [
+        821.5200805664062,
+        1568.9307861328125
+      ],
+      "size": [
+        490,
+        370
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 97
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 63,
+      "type": "PreviewImage",
+      "pos": [
+        838.2942504882812,
+        2076.027587890625
+      ],
+      "size": [
+        490,
+        370
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 98
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 54,
+      "type": "RexOmniDetector",
+      "pos": [
+        260,
+        770
+      ],
+      "size": [
+        400,
+        236
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "rex_omni_model",
+          "name": "rex_omni_model",
+          "type": "REX_OMNI_MODEL",
+          "link": 81
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 82
+        }
+      ],
+      "outputs": [
+        {
+          "label": "visualization",
+          "name": "visualization",
+          "type": "IMAGE",
+          "links": [
+            83
+          ]
+        },
+        {
+          "label": "result_text",
+          "name": "result_text",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "predictions_json",
+          "name": "predictions_json",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "bboxes",
+          "name": "bboxes",
+          "type": "BBOX",
+          "links": null
+        },
+        {
+          "label": "texts",
+          "name": "texts",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "keypoints",
+          "name": "keypoints",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RexOmniDetector"
+      },
+      "widgets_values": [
+        "detection",
+        "Detect a person. Output bounding box coordinates in the format [x0, y0, x1, y1].",
+        "person"
+      ]
+    },
+    {
+      "id": 58,
+      "type": "RexOmniDetector",
+      "pos": [
+        285.5636901855469,
+        1189.4449462890625
+      ],
+      "size": [
+        400,
+        236
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "rex_omni_model",
+          "name": "rex_omni_model",
+          "type": "REX_OMNI_MODEL",
+          "link": 93
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 90
+        }
+      ],
+      "outputs": [
+        {
+          "label": "visualization",
+          "name": "visualization",
+          "type": "IMAGE",
+          "links": [
+            96
+          ]
+        },
+        {
+          "label": "result_text",
+          "name": "result_text",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "predictions_json",
+          "name": "predictions_json",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "bboxes",
+          "name": "bboxes",
+          "type": "BBOX",
+          "links": null
+        },
+        {
+          "label": "texts",
+          "name": "texts",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "keypoints",
+          "name": "keypoints",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RexOmniDetector"
+      },
+      "widgets_values": [
+        "pointing",
+        "Please localize the person.",
+        "person"
+      ]
+    },
+    {
+      "id": 59,
+      "type": "RexOmniDetector",
+      "pos": [
+        280,
+        1590
+      ],
+      "size": [
+        400,
+        236
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "rex_omni_model",
+          "name": "rex_omni_model",
+          "type": "REX_OMNI_MODEL",
+          "link": 94
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 91
+        }
+      ],
+      "outputs": [
+        {
+          "label": "visualization",
+          "name": "visualization",
+          "type": "IMAGE",
+          "links": [
+            97
+          ]
+        },
+        {
+          "label": "result_text",
+          "name": "result_text",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "predictions_json",
+          "name": "predictions_json",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "bboxes",
+          "name": "bboxes",
+          "type": "BBOX",
+          "links": null
+        },
+        {
+          "label": "texts",
+          "name": "texts",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "keypoints",
+          "name": "keypoints",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RexOmniDetector"
+      },
+      "widgets_values": [
+        "keypoint",
+        "Can you detect each person in the image using the [x0, y0, x1, y1] bounding box format and provide coordinates for their nose, left eye, right eye, left ear, right ear, left shoulder, right shoulder, left elbow, right elbow, left wrist, right wrist, left hip, right hip, left knee, right knee, left ankle, and right ankle (in [x0, y0] format)? Output the results in JSON format.",
+        "person"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "LoadImage",
+      "pos": [
+        -250,
+        1020
+      ],
+      "size": [
+        400,
+        326
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            82,
+            90,
+            91
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "person.png",
+        "image"
+      ]
+    },
+    {
+      "id": 64,
+      "type": "LoadImage",
+      "pos": [
+        -230,
+        2080
+      ],
+      "size": [
+        400,
+        326
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            99
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ocr.png",
+        "image"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "MarkdownNote",
+      "pos": [
+        100,
+        210
+      ],
+      "size": [
+        620,
+        450
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "\n\n# Task 1: Detect Objects and Return Bounding Boxes\n\n### Prompt (Optional):\n```\n\nDetect a person. Output bounding box coordinates in the format [x0, y0, x1, y1].\n\n```\n\n***\n\n# Task 2: Localize Objects and Return Point Coordinates\n\n### Prompt (Optional):\n```\n\nPlease localize the person.\n\n```\n\n***\n\n# Task 3: Detect Keypoints and Visualize Skeleton\n\n### Prompt (Optional):\n```\n\nCan you detect each person in the image using the [x0, y0, x1, y1] bounding box format and provide coordinates for their nose, left eye, right eye, left ear, right ear, left shoulder, right shoulder, left elbow, right elbow, left wrist, right wrist, left hip, right hip, left knee, right knee, left ankle, and right ankle (in [x0, y0] format)? Output the results in JSON format.\n\n```\n\n***\n\n# Task 4: Keypoint Detection with Skeleton Visualization\n\n### Prompt (Optional):\n```\n\nOptical Character Recognition with Customizable Output Format\n\n```\n```"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 60,
+      "type": "RexOmniDetector",
+      "pos": [
+        270,
+        2050
+      ],
+      "size": [
+        400,
+        236
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "rex_omni_model",
+          "name": "rex_omni_model",
+          "type": "REX_OMNI_MODEL",
+          "link": 95
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 99
+        }
+      ],
+      "outputs": [
+        {
+          "label": "visualization",
+          "name": "visualization",
+          "type": "IMAGE",
+          "links": [
+            98
+          ]
+        },
+        {
+          "label": "result_text",
+          "name": "result_text",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "predictions_json",
+          "name": "predictions_json",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "bboxes",
+          "name": "bboxes",
+          "type": "BBOX",
+          "links": null
+        },
+        {
+          "label": "texts",
+          "name": "texts",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "keypoints",
+          "name": "keypoints",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RexOmniDetector"
+      },
+      "widgets_values": [
+        "ocr_polygon",
+        "Can you detect all word in this image in polygon format like [x0, y0, x1, y1, x2, y2 ...] and then recognize them?",
+        "person"
+      ]
+    }
+  ],
+  "links": [
+    [
+      81,
+      24,
+      0,
+      54,
+      0,
+      "REX_OMNI_MODEL"
+    ],
+    [
+      82,
+      21,
+      0,
+      54,
+      1,
+      "IMAGE"
+    ],
+    [
+      83,
+      54,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      90,
+      21,
+      0,
+      58,
+      1,
+      "IMAGE"
+    ],
+    [
+      91,
+      21,
+      0,
+      59,
+      1,
+      "IMAGE"
+    ],
+    [
+      93,
+      24,
+      0,
+      58,
+      0,
+      "REX_OMNI_MODEL"
+    ],
+    [
+      94,
+      24,
+      0,
+      59,
+      0,
+      "REX_OMNI_MODEL"
+    ],
+    [
+      95,
+      24,
+      0,
+      60,
+      0,
+      "REX_OMNI_MODEL"
+    ],
+    [
+      96,
+      58,
+      0,
+      61,
+      0,
+      "IMAGE"
+    ],
+    [
+      97,
+      59,
+      0,
+      62,
+      0,
+      "IMAGE"
+    ],
+    [
+      98,
+      60,
+      0,
+      63,
+      0,
+      "IMAGE"
+    ],
+    [
+      99,
+      64,
+      0,
+      60,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.48121402537084673,
+      "offset": [
+        1142.7275115637897,
+        -939.7902325623601
+      ]
+    },
+    "frontendVersion": "1.27.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
