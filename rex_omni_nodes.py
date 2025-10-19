@@ -232,10 +232,6 @@ def _draw_keypoints(draw, annotation, color, draw_width, category, font, show_la
             return
         
         # 不绘制边界框，保持简洁（官方输出也没有边界框）
-        # if bbox and len(bbox) >= 4:
-        #     x_min, y_min, x_max, y_max = bbox[:4]
-        #     draw.rectangle([x_min, y_min, x_max, y_max], outline=color, width=draw_width)
-        #     print(f"  绘制边界框: [{x_min}, {y_min}, {x_max}, {y_max}]")
         
         # 使用官方定义的骨架连接（来自utils.py）
         # COCO keypoint skeleton connections
@@ -384,8 +380,6 @@ def _draw_keypoints(draw, annotation, color, draw_width, category, font, show_la
         
     except Exception as e:
         pass
-        import traceback
-        traceback.print_exc()
 
 
 def RexOmniVisualize(
