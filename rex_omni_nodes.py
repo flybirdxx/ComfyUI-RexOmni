@@ -27,6 +27,17 @@ try:
     REX_OMNI_AVAILABLE = True
 except ImportError as e:
     REX_OMNI_AVAILABLE = False
+    # 定义默认的TaskType以防导入失败
+    from enum import Enum
+    class TaskType(Enum):
+        DETECTION = "detection"
+        POINTING = "pointing"
+        VISUAL_PROMPTING = "visual_prompting"
+        KEYPOINT = "keypoint"
+        OCR_BOX = "ocr_box"
+        OCR_POLYGON = "ocr_polygon"
+        GUI_DETECTION = "gui_grounding"
+        GUI_POINTING = "gui_pointing"
 
 # 获取模型配置
 model_dir = get_model_directory()
